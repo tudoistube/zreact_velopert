@@ -10,7 +10,7 @@
 React.js 와 Java Spring 을 사용해서 뭔가 공익적인 측면에 도움이 될 수 있는 것을
 함께 만드실 분을 찾음.
 
-I hope to make something good to make our society better.
+I hope to make something good to make our society better.  
 If you are interested in my idea, please send your mail to me.  
 e-mail : tudoistube@gmail.com
 ---
