@@ -1,4 +1,4 @@
-#zreact_velopert_by_4_8
+#zreact_velopert_by_4_8 : Show Card, Increase Number, Unmount Card 버튼 클릭해서 Lifecycle log 확인.  
 ##[Velopert, 김민준님의 React.js 동영상 강좌](https://youtu.be/GEoNiUcVwjE?list=PL9FpF_z-xR_GMujql3S_XGV2SpdfDBkeC "React.js 유튜브강좌" )  
 ##[Velopert, 김민준님의 블로그](https://velopert.com/  "React.js 블로그")  
   
