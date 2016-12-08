@@ -1,7 +1,8 @@
 var webpack=require('webpack');
 
 module.exports={
-  entry: './src/index.js',
+  //entry: './src/index.js',
+  entry: './src/index_04_08.js',  
 
   output: {
       path: __dirname + '/public/',
