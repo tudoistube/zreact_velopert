@@ -1,4 +1,4 @@
-#zreact_velopert_by_4_8
+#zreact_velopert_by_4_9 : localStorage 사용해서 새로고침해도 Contact 데이터 유지하기.  
 ##[Velopert, 김민준님의 React.js 동영상 강좌](https://youtu.be/GEoNiUcVwjE?list=PL9FpF_z-xR_GMujql3S_XGV2SpdfDBkeC "React.js 유튜브강좌" )  
 ##[Velopert, 김민준님의 블로그](https://velopert.com/  "React.js 블로그")  
   
