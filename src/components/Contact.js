@@ -56,7 +56,7 @@ export default class Contact extends React.Component{
   handleRemove(){
     this.setState({
       contactData: update(this.state.contactData,
-                           { $splice: [[this.stae.zselectedKey, 1]]}
+                           { $splice: [[this.state.zselectedKey, 1]]}
                          ),
       zselectedKey: -1
     });
