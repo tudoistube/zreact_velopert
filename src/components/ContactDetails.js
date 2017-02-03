@@ -10,19 +10,23 @@ export default class ContactDetails extends React.Component{
     };
     this.handleToggle = this.handleToggle.bind(this);
     this.handleChange = this.handleChange.bind(this);
-    this.handleUpdate = this.handleUpdate.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
     this.handleKeyPress = this.handleKeyPress.bind(this);
   }
 
   //...Update 버튼을 클릭할 때 input 태그에 연락처 정보를 담게 함.
   handleToggle(){
+	//...item 을 선택했을때만 토글되게함.	
+	console.log('this.props.isSelected : ', this.props.isSelected);
+	if(!this.props.isSelected){  return;  }	  
+	  
     if(!this.state.isEditable){
       this.setState({
         name: this.props.zcontact.name,
         phone: this.props.zcontact.phone
       });
     }else{
-      this.handleUpdate();//...'OK'버튼을 클릭하면 데이터 업데이트됨.
+      this.handleEdit();//...'OK'버튼을 클릭하면 데이터 업데이트됨.
     }
 
     //...setState() 가 비동기 메서드이므로,
@@ -57,8 +61,8 @@ export default class ContactDetails extends React.Component{
   }
 
   //...state를 그대로 전달하므로 파라미터가 필요없음.
-  handleUpdate(){
-    this.props.onUpdate(this.state.name, this.state.phone);
+  handleEdit(){
+    this.props.onEdit(this.state.name, this.state.phone);
   }
 
   handleKeyPress(e) {
@@ -119,11 +123,11 @@ ContactDetails.defaultProps = {
   },
   //...onRemove 라는 기본 props 를 지정함.
   onRemove: ()=>{console.error('onRemove not defined');},
-  onUpdate: ()=>{console.error('onUpdate not defined');}
+  onEdit: ()=>{console.error('onEdit not defined');}
 };
 
 ContactDetails.propTypes = {
   zcontact: React.PropTypes.object,
   onRemove: React.PropTypes.func,
-  onUpdate: React.PropTypes.func
+  onEdit: React.PropTypes.func
 }
