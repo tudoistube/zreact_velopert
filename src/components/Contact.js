@@ -70,13 +70,15 @@ export default class Contact extends React.Component{
 		this.setState({
 			contactData: update( this.state.contactData,
 				{
-					[this.state.selectedKey]: {
+					[this.state.zselectedKey]: {
 						name: { $set: name },
 						phone: { $set: phone }
 					}
 				}
 			)
 		});
+		
+		console.log('this.state.zselectedKey is ', this.state.selectedKey);
 	}
 
   render(){
