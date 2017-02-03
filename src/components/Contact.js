@@ -25,7 +25,7 @@ export default class Contact extends React.Component{
 
     this.handleCreate = this.handleCreate.bind(this);
     this.handleRemove = this.handleRemove.bind(this);
-    this.handleUpdate = this.handleUpdate.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
 
     console.log('a. react-hot 로듈모더는 constructor를 실행하지 않으므로 새로 고침해야 함');
     console.log('b. react-hot 로듈모더는 constructor를 실행하지 않으므로 새로 고침해야 함');
@@ -66,7 +66,8 @@ export default class Contact extends React.Component{
     console.log(temp_selectedKey + ' was deleted...');
   }
 
-  handleUpdate(name, phone){
+  handleEdit(name, phone){
+	    if(this.state.zselectedKey < 0){  return;  }
 		this.setState({
 			contactData: update( this.state.contactData,
 				{
@@ -107,7 +108,7 @@ export default class Contact extends React.Component{
           zcontact={this.state.contactData[this.state.zselectedKey]}
           //...onRemove 라는 props 에 this.handleRemove 라는 값을 전달함.
           onRemove={this.handleRemove}
-          onUpdate={this.handleUpdate} />
+          onEdit={this.handleEdit} />
         <ContactCreate
           onCreate={this.handleCreate}/>
       </div>
